@@ -1,5 +1,5 @@
 ---
-title: "开发模版规范 - 基础版"
+title: "开发模板规范 - 基础版"
 date: 2020-11-11T00:00:00+09:00
 draft: false
 collapsible: false
@@ -9,7 +9,7 @@ weight: 5
 ## 基本介绍
 
 此规范定义的是开发一个 AppCenter 云应用需要的基本元素，不包括国际化、监控告警和其它高级功能，
-旨在让开发者快速入门，详细的规范请参考[云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)。
+旨在让开发者快速入门，详细的规范请参考[云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)。
 
 开发者提交一个应用需要包含以下几个文件：
 

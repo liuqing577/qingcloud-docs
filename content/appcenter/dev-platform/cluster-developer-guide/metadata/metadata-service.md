@@ -195,7 +195,7 @@ weight: 4
 
 参数|描述
 | - | - |
-hosts|hosts 分角色保存节点信息，如果没有角色，就直接保存在 hosts 之下。角色名称的定义来自 [云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications) 里的定义。节点信息是一组以主机 ID (通常情况也是主机名，即以 i- 开头的字符串)为子目录组成，每个子目录下是此主机以 key-value 形式保存的详细信息。
+hosts|hosts 分角色保存节点信息，如果没有角色，就直接保存在 hosts 之下。角色名称的定义来自 [云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications) 里的定义。节点信息是一组以主机 ID (通常情况也是主机名，即以 i- 开头的字符串)为子目录组成，每个子目录下是此主机以 key-value 形式保存的详细信息。
 ip|节点私有 IP 地址
 eip|节点绑定的公网 IP 地址，默认为空
 mac|节点 mac 地址
@@ -214,7 +214,7 @@ volume_class |数据盘类型，其中 0 表示性能盘，3 表示超高性能�
 physical_machine|节点所在物理机标识符
 role|节点角色名称
 pub_key|节点 passphraseless ssh 公钥
-token|节点通过开发者自定义脚本在该主机里运行结果，详情参见[云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications) 。
+token|节点通过开发者自定义脚本在该主机里运行结果，详情参见[云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications) 。
 reserved_ips | 节点预留 ip 地址. 这个目录下开发者可以定义多个 reserved IP，比如 write\_ip, read\_ip 等等，名称开发者自行定义，value 对应的就是这个 reserved IP 的地址。
 
 
@@ -222,7 +222,7 @@ reserved_ips | 节点预留 ip 地址. 这个目录下开发者可以定义多�
 
 > 在制作镜像的时候由于 confd 会默认配置 prefix 为 /self，所以在镜像里获取信息时可以省略 /self，
 比如上例可以直接通过 /hosts/i-abcd2xyz/ip 来获取这个节点的 IP 地址。
-如果在[云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications) 
+如果在[云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications) 
 里定义 metadata_root_access 为 true，则 confd 会配置 prefix为 /，
 这个时候需要通过 /self/hosts/i-abcd2xyz/ip 来获取这个节点的 IP 地址。
 
@@ -266,7 +266,7 @@ global_uuid|集群全球唯一 ID，用户在进入部署应用页面时自动�
 cluster_tag|集群以及通过 api 创建的资源所绑定的 tag_id
 vxnet|集群所在网络 ID
 zone|集群所在区域 ID
-endpoints|应用供第三方使用的 endpoint 定义，service name 可在[云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications) 中任意定义。如果一个第三方应用通过 [links](#links) 链接到本应用，那么就可以通过此功能 (例： /links/*link\_name*/cluster/endpoints/*client*，假定开发者定义这个 endpoint 服务名为 client) 获取到本应用的 endpoint 信息。endpoint 下还可以定义 reserved\_ips，这个目录下开发者可以定义多个 reserved IP，比如 write\_ip, read\_ip 等等，名称开发者自行定义，value 对应的就是这个 reserved IP 的地址。
+endpoints|应用供第三方使用的 endpoint 定义，service name 可在[云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications) 中任意定义。如果一个第三方应用通过 [links](#links) 链接到本应用，那么就可以通过此功能 (例： /links/*link\_name*/cluster/endpoints/*client*，假定开发者定义这个 endpoint 服务名为 client) 获取到本应用的 endpoint 信息。endpoint 下还可以定义 reserved\_ips，这个目录下开发者可以定义多个 reserved IP，比如 write\_ip, read\_ip 等等，名称开发者自行定义，value 对应的就是这个 reserved IP 的地址。
 api_server|集群内部可通过内网访问的 api server 信息, 包括 host，port，protocol。
 resource_limits|当前 zone 下所支持的资源类型，valid_volume_classes：逗号分隔的磁盘类型；valid_instance_classes：逗号分隔的主机类型。
 upgrade-audit|升级操作时，临时保存升级版本信息，from_app_version：升级前版本 ID；to_app_version：升级后版本 ID。
@@ -287,12 +287,12 @@ upgrade-audit|升级操作时，临时保存升级版本信息，from_app_versio
 
 ### links
 
-  外部服务依赖定义，有些应用依赖于另外一个服务才能正常工作，如 Kafka 依赖于 ZooKeeper，因此此处需指定被依赖集群的 ID，service name 可在[云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications) 中任意定义。
+  外部服务依赖定义，有些应用依赖于另外一个服务才能正常工作，如 Kafka 依赖于 ZooKeeper，因此此处需指定被依赖集群的 ID，service name 可在[云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications) 中任意定义。
 
 ### cmd
 
   cmd 表示本节点需要执行的命令。开发者不需要用到这类信息，这是青云调度系统转发并执行应用命令，如启动应用命令等。
-  > 开发者只需要在模版中定义命令即可，详情参见[云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)。
+  > 开发者只需要在模板中定义命令即可，详情参见[云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)。
 
 参数 | 描述         
 | - | - |

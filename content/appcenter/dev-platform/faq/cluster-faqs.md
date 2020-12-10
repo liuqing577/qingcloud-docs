@@ -27,7 +27,7 @@ weight: 1
 
 具体配置请参考文档 [制作 KVM 镜像](/appcenter/dev-platform/cluster-developer-guide/image-build/build/#制作-kvm-镜像)
 
-**关键字**： 创建模版文件
+**关键字**： 创建模板文件
 
 ### 4. 什么是 Metadata 服务，如何查询 Metadata 上的值？  
 
@@ -119,7 +119,7 @@ init脚本在创建集群的时候调用，并且只在创建集群的时候调�
 如何检查数据持久化是否配置成功？  
 关闭集群，再启动集群，打开应用实例查看数据是否还在。
 
->具体配置请参考文档 [云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications) 关键字：init
+>具体配置请参考文档 [云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications) 关键字：init
 
 ### 7. 如何写健康检查的配置和脚本？  
 
@@ -146,7 +146,7 @@ init脚本在创建集群的时候调用，并且只在创建集群的时候调�
 > check_cmd 的内容为根据你的应用自己编写的脚本，appcenter 会根据 exit code 判断是否健康，
 exit code 为 0 则健康，非 0 则不健康。action_cmd 的内容为在服务不健康的情况下需要做的动作。
 
-具体配置请参考文档 [云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
+具体配置请参考文档 [云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
 
 **关键字**：health_check
 
@@ -187,7 +187,7 @@ exit code 为 0 则健康，非 0 则不健康。action_cmd 的内容为在服�
 ![faq_monitor.png](/appcenter/dev-platform/cluster-images/faq_monitor.png)
 >cmd的内容为根据你的应用自己编写的脚本，其返回结果是特定格式的json。
 
-具体配置请参考文档 [云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
+具体配置请参考文档 [云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
 
 **关键字**：monitor
 
@@ -221,7 +221,7 @@ exit code 为 0 则健康，非 0 则不健康。action_cmd 的内容为在服�
 ![faq_customservice.png](/appcenter/dev-platform/cluster-images/faq_customservice.png)
 > cmd 的内容为根据你的应用自己编写的脚本，自定义服务的内容。
 
-具体配置请参考文档 [云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
+具体配置请参考文档 [云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
 
 **关键字**："type": "custom"
 
@@ -286,7 +286,7 @@ curl http://metadata/self/cluster/endpoints/reserved_ips/vip/value
 
 如果配置了此参数，在控制台集群列表的`配置参数`tab页可以查看具体配置信息。
 ![faq_params.png](/appcenter/dev-platform/cluster-images/faq_params.png)
->角色节点级别的示例和具体配置请参考文档 [云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
+>角色节点级别的示例和具体配置请参考文档 [云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
 
 **关键字**：env
 
@@ -318,7 +318,7 @@ curl http://metadata/self/cluster/endpoints/reserved_ips/vip/value
 
 如果配置了此参数，输入非法数据，在提交创建应用的时候会提示错误信息。
 ![faq_pattern.png](/appcenter/dev-platform/cluster-images/faq_pattern.png)
->具体配置请参考文档 [云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
+>具体配置请参考文档 [云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
 
 **关键字**：pattern
 
@@ -359,7 +359,7 @@ cmd内容为采集的数据需执行的命令，必填项。
 labels 表示表格第一行的标题，是个 list，最多可定义5列；    
 data标示表格里面每行数据，要求data是个list，list下是多个子list，最多255个。 
 其中每个子list标示一行数据，元素个数需和labels中一致。  
->具体配置请参考文档 [云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
+>具体配置请参考文档 [云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
 
 **关键字**：display_tabs
 
@@ -387,7 +387,7 @@ data标示表格里面每行数据，要求data是个list，list下是多个子l
 ![faq_vnc.png](/appcenter/dev-platform/cluster-images/faq_vnc.png)    
 同时，在 [AppCenter应用开发](https://appcenter.qingcloud.com/apps/) 搜索找到你需要的应用，打开`资源` tab 页，右侧有一个 VNC 小图标。    
 ![faq_vnc2.png](/appcenter/dev-platform/cluster-images/faq_vnc2.png)   
->具体配置请参考文档 [云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
+>具体配置请参考文档 [云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
 
 **关键字**：user_access
 
@@ -468,7 +468,7 @@ incremental_backup_supported
 }
 ```
 
->具体配置请参考文档 [云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
+>具体配置请参考文档 [云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
 
 **关键字**：backup_policy、backup、incremental_backup_supported
 
@@ -516,7 +516,7 @@ incremental_backup_supported
 * 新版本直接支持从旧版本无缝升级到新版本，在新版本的镜像中同时安装新旧2个版本，在 upgrade 的 cmd 编写脚本，
 将数据从旧版本转换成新版本可直接读取的文件格式。  
 
->具体配置请参考文档 [云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
+>具体配置请参考文档 [云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
 
 **关键字**：upgrade_policy、upgrade  
 
@@ -536,7 +536,7 @@ incremental_backup_supported
 
 如果配置了此参数，在控制台上集群信息左侧会出现 VIP 的具体信息。   
 ![faq_vip.png](/appcenter/dev-platform/cluster-images/faq_vip.png)
->具体配置请参考文档 [云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
+>具体配置请参考文档 [云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
 
 **关键字**：reserved_ips		
 
@@ -569,7 +569,7 @@ incremental_backup_supported
 ```
 
 config.json 定义用户在 QingCloud 控制台部署应用时需要填写的表单。
->具体配置请参考文档 [云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
+>具体配置请参考文档 [云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
 
 **关键字**：国际化		
 
@@ -621,7 +621,7 @@ config.json 定义用户在 QingCloud 控制台部署应用时需要填写的表
 其中 limits 参数的值为 app-id***: [app-version***]。若 version 列表为空，表示该应用所有版本均可支持。
 如果配置了此参数，在控制台上新建集群的时候会出现当前实例所在的私网下存在的所依赖的服务。   
 ![faq_depend.png](/appcenter/dev-platform/cluster-images/faq_depend.png)
->具体配置请参考文档 [云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
+>具体配置请参考文档 [云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
 
 **关键字**：links、limits
 
@@ -688,7 +688,7 @@ config.json 定义用户在 QingCloud 控制台部署应用时需要填写的表
 
 如果配置了此参数，在控制台上集群节点列表上会出现新增节点的按钮。
 ![faq_scale.png](/appcenter/dev-platform/cluster-images/faq_scale.png)
->具体配置请参考文档 [云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
+>具体配置请参考文档 [云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
 
 **关键字**：advanced_actions、scale_horizontal、scale_out、scale_in
 
@@ -710,7 +710,7 @@ config.json 定义用户在 QingCloud 控制台部署应用时需要填写的表
 
 如果配置了此参数，在控制台上集群列表选中集群右键会出现切换私有网络菜单。
 ![faq_vxnet.png](/appcenter/dev-platform/cluster-images/faq_vxnet.png)
->具体配置请参考文档 [云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
+>具体配置请参考文档 [云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
 
 **关键字**：advanced_actions、change_vxnet
 
@@ -732,7 +732,7 @@ config.json 定义用户在 QingCloud 控制台部署应用时需要填写的表
 }
 ```
 
->具体配置请参考文档 [云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
+>具体配置请参考文档 [云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)
 
 **关键字**：advanced_actions、associate_eip
 

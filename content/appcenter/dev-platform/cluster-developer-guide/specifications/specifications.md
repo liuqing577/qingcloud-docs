@@ -1,5 +1,5 @@
 ---
-title: "开发模版规范 - 完整版"
+title: "开发模板规范 - 完整版"
 date: 2020-11-11T00:00:00+09:00
 draft: false
 collapsible: false
@@ -8,7 +8,7 @@ weight: 6
 
 ## 基本介绍
 
-如果想快速了解规范可以先阅读[应用开发模版规范 - 基础版](/appcenter/dev-platform/cluster-developer-guide/specifications/basic-specifications)。
+如果想快速了解规范可以先阅读[应用开发模板规范 - 基础版](/appcenter/dev-platform/cluster-developer-guide/specifications/basic-specifications)。
 
 开发者提交一个应用需要包含以下几个文件：
 
@@ -906,7 +906,7 @@ type |custom 表示这个服务是自定义的， 自定义的名字 (即 key，
 
 有一些应用用来管理其它应用，因此需要通过 metadata service 获取其它应用实例的信息，默认情况下 (metadata_root_access 为 false) 本应用只能获取自身集群 (即 self) 的信息和通过 self 下的 links 获取外部集群信息，如果设置 metadata_root_access 为 true，则能获取 metadata service 下所有集群的信息。如果您的应用不属于此类管理型应用，则不用设置此项。
 
-下例示范 tmpl 模版文件遍历所有集群节点 ip 地址 (假定都是无角色的节点)
+下例示范 tmpl 模板文件遍历所有集群节点 ip 地址 (假定都是无角色的节点)
 
 ```text
 {{range gets "/clusters/*/hosts/*/ip"}}{{.Value}}
