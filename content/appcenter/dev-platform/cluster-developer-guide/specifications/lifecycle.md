@@ -15,7 +15,7 @@ weight: 7
 
 1. 创建当前集群所有节点的资源如主机、硬盘、IP 地址等；　<br>
 2. 将本集群中所有信息注册到 [metadata service](/appcenter/dev-platform/cluster-developer-guide/metadata/metadata-service) 中；　<br>
-3. 启动所有节点的 confd agent，监控 metadata service 中本集群信息的变化并按照 /etc/confd 下的模版 (toml、tmpl) 定义刷新配置；如果 toml 文件里定义 reload_cmd　且配置确实发生变更则相应地执行该命令；　<br>
+3. 启动所有节点的 confd agent，监控 metadata service 中本集群信息的变化并按照 /etc/confd 下的模板 (toml、tmpl) 定义刷新配置；如果 toml 文件里定义 reload_cmd　且配置确实发生变更则相应地执行该命令；　<br>
 4. 执行 init 和 start 中定义的 cmd，按照 init 中 [post\_start\_service](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications#init) 的定义顺序执行，如果 post\_start\_service 为 true 则表示 init 在 start 后执行；不同 role 节点相同命令执行顺序按照 order 的定义从小到大依次执行，默认为0(最早执行)，相同 order 的节点并行执行。
 
 ## 删除集群
@@ -42,7 +42,7 @@ weight: 7
 ## 增加节点
 
 ![增加节点](/appcenter/dev-platform/cluster-developer-guide/specifications/images/add-cluster-nodes.png)
-> 新增角色节点需支持横向伸缩，即定义了 scale\_horizontal 的 advanced\_actions，参见 [云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)。 <br>
+> 新增角色节点需支持横向伸缩，即定义了 scale\_horizontal 的 advanced\_actions，参见 [云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)。 <br>
 
 1. 创建新增节点的资源如主机、硬盘、IP 地址等；<br>
 2. 注册新增节点的信息到 metadata service 中即 /hosts 下，同时注册到 /adding-hosts 这个临时目录下 (注：应用的主机可以从这个临时目录获取信息并执行横向扩容之前预处理操作等)；<br>
@@ -107,11 +107,11 @@ weight: 7
 
 1. 关闭集群节点；<br>
 2. 以新版本镜像启动节点；<br>
-3. 启动所有节点的 confd agent，监控 metadata service 中本集群信息的变化并按照 /etc/confd 下的模版 (toml、tmpl) 定义刷新配置；如果 toml 文件里定义 reload_cmd　且配置确实发生变更则相应地执行该命令；<br>
+3. 启动所有节点的 confd agent，监控 metadata service 中本集群信息的变化并按照 /etc/confd 下的模板 (toml、tmpl) 定义刷新配置；如果 toml 文件里定义 reload_cmd　且配置确实发生变更则相应地执行该命令；<br>
 4. 执行 start 和 upgrade 中定义的 cmd，按照 upgrade 中 post_start_service 的定义顺序执行，如果 post_start_service 为 true 则表示 upgrade 在 start 后执行；不同 role 节点相同命令执行顺序按照 order 的定义从小到大依次执行，默认为0(最早执行)，相同 order 的节点并行执行；<br>
 5. 如果第 4 步中的命令执行后的返回值非0，则此次升级任务失败，需要手动关闭集群并执行第 6 步降级操作；<br>
 6. 集群节点以旧版本镜像启动；<br>
-7. 启动所有节点的 confd agent，监控 metadata service 中本集群信息的变化并按照 /etc/confd 下的模版 (toml、tmpl) 定义刷新配置；如果 toml 文件里定义 reload_cmd　且配置确实发生变更则相应地执行该命令；<br>
+7. 启动所有节点的 confd agent，监控 metadata service 中本集群信息的变化并按照 /etc/confd 下的模板 (toml、tmpl) 定义刷新配置；如果 toml 文件里定义 reload_cmd　且配置确实发生变更则相应地执行该命令；<br>
 8. 不同的角色节点按 order 升序执行 start 中定义的 cmd。
 
 > 注： 第 1 步到第 4 步的流程，按照 upgrading_policy 的定义， 顺序执行 (sequential) 或 并行执行 (parallel)

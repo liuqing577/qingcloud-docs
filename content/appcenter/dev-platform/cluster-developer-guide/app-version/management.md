@@ -25,7 +25,7 @@ weight: 2
 
 ### 创建配置文件
 
-配置文件包是一组根据应用开发模版规范描述应用实例的文件组成，描述内容包括应用实例基础架构、生命周期及监控告警等，比如说创建应用实例时需要的参数，每个参数的可选项，以及各个节点的映像等。完整的配置文件包需要打包以下几个文件：
+配置文件包是一组根据应用开发模板规范描述应用实例的文件组成，描述内容包括应用实例基础架构、生命周期及监控告警等，比如说创建应用实例时需要的参数，每个参数的可选项，以及各个节点的映像等。完整的配置文件包需要打包以下几个文件：
 
 - config.json 该文件包含最终用户创建此应用实例时通过 UI 需设置的参数等信息；
 - cluster.json.mustache 该文件包含创建此应用需要用到的映像、多少类节点、服务启动命令等信息；
@@ -38,7 +38,7 @@ config.json 中定义的参数，在青云QingCloud 控制台上由用户设置�
 
 镜像制作请参考：[镜像制作](/appcenter/dev-platform/cluster-developer-guide/image-build/build)
 
-我们提供了从简单到复杂的应用配置文件样例，详情请参看[云应用开发模版规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)，也提供一些[范例](https://github.com/search?q=topic%3Aqingcloud-sample-apps+org%3AQingCloudAppcenter&type=Repositories)供参考。
+我们提供了从简单到复杂的应用配置文件样例，详情请参看[云应用开发模板规范 - 完整版](/appcenter/dev-platform/cluster-developer-guide/specifications/specifications)，也提供一些[范例](https://github.com/search?q=topic%3Aqingcloud-sample-apps+org%3AQingCloudAppcenter&type=Repositories)供参考。
 
 
 ### 测试应用版本
@@ -50,8 +50,6 @@ config.json 中定义的参数，在青云QingCloud 控制台上由用户设置�
 ![测试版本](/appcenter/dev-platform/cluster-images/test_app.png)
 
 在测试部署集群实例时需要填写创建表单，提交之后便开始部署过程，部署完成之后可在“集群列表”页面看到刚刚创建的集群实例，进入其详情页面可以查看到“基本信息”、“节点列表”以及“配置参数”等信息，同时可对集群实例做各项操作以测试其可用性等。
-
-![我的应用](/appcenter/dev-platform/cluster-images/my_apps.png)
 
 ![应用集群列表](/appcenter/dev-platform/cluster-images/app_cluster_list.png)
 
@@ -67,7 +65,7 @@ config.json 中定义的参数，在青云QingCloud 控制台上由用户设置�
 
 ![已提交审核](/appcenter/dev-platform/cluster-images/app_submitted.png)
 
-审核工作将在10个工作日内完成。当审核被拒绝时页面上会显示详细的拒绝原因，请调整后重新提交审核。
+审核工作将在 5 个工作日内完成。当审核被拒绝时页面上会显示详细的拒绝原因，请调整后重新提交审核。
 
 ![审核被拒绝](/appcenter/dev-platform/cluster-images/reject_app_version.png)
 
