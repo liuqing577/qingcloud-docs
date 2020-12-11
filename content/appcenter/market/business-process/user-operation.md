@@ -11,7 +11,7 @@ draft: false
 青云QingCloud 为青云用户和Qingcloud AppCenter 服务商提供了以下方式进行应用查看：
 
 1. 登录[应用管理平台](https://appcenter.qingcloud.com/developer)，进入应用市场，可查看QingCloud出品的应用，可根据应用分类和应用搜索查找所需应用。
-2. 登录进入[控制管理平台](https://pek2console3.qingcloud.com/)，在AppCenter控制台的**应用中心**或者**产品与服务**，快速查看所需应用。
+2. 登录进入[控制管理平台](https://console.qingcloud.com/)，在AppCenter控制台的**应用中心**或者**产品与服务**，快速查看所需应用。
 
 在控制管理平台，进入到了工作台，点击**产品与服务**查看。
 
@@ -69,11 +69,11 @@ draft: false
 
 ## 应用购买
 
-用户可在[应用管理平台](https://appcenter.qingcloud.com/)的应用市场进行应用的购买，同时还可在[控制管理平台](https://pek2console3.qingcloud.com/)的应用中心或者常用应用界面选择应用进行部署购买。
+用户可在[应用管理平台](https://appcenter.qingcloud.com/)的应用市场进行应用的购买，同时还可在[控制管理平台](https://console.qingcloud.com/)的应用中心或者常用应用界面选择应用进行部署购买。
 
 ### 应用中心购买
 
-在[控制管理平台](https://pek2console3.qingcloud.com/)的应用中心，可以选择应用进行部署购买。
+在[控制管理平台](https://console.qingcloud.com/)的应用中心，可以选择应用进行部署购买。
 
 **第一步：进入AppCenter控制台的应用中心后，选择应用，点击立即部署，进入部署页面**
 
