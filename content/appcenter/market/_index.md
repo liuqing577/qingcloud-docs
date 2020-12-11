@@ -22,23 +22,14 @@ Section2:
       content: 服务商入驻
       url: "/appcenter/market/business-process/contracts"
 
-section3:
-  title: API 文档
-  children:
-    - title: 应用市场
-      content: 应用市场 API
-      url: "/appcenter/dev-platform/cluster"
-
 section4:
   children:
     - title: 了解：什么是AppCenter
       content: AppCenter 即应用市场，为用户提供各类丰富应用。
       vice_title: 了解的第一步
       children:
-        - title: 产品概述
+        - title: 应用市场简介
           url: "/appcenter/market/intro/introduction"
-        - title: 产品动态
-          url: "/appcenter/market/intro/product_dynamics"
       
     - title: 上手：使用应用
       content: 您可获取到开通、购买、使用 AppCenter 应用市场的应用。
