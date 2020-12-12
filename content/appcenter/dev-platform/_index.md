@@ -58,7 +58,7 @@ section4:
           url: "/appcenter/dev-platform/cluster-developer-guide/image-build/build/"
 
         - title: 提交应用版本审核
-          url: "/dev-platform/cluster-developer-guide/app-version/management/#提交应用版本"
+          url: "/appcenter/dev-platform/cluster-developer-guide/app-version/management/#提交应用版本"
 
     - title: 开发：如何开发 SaaS 应用
       content: 
